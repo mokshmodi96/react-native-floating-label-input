@@ -24,6 +24,7 @@ import Animated, {
   EasingNode,
   timing,
   interpolateColors,
+    //@ts-ignore
 } from 'react-native-reanimated';
 import { styles } from './styles';
 
