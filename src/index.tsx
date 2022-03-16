@@ -24,6 +24,7 @@ import Animated, {
   EasingNode,
   timing,
   interpolateColors,
+    //@ts-ignore
 } from 'react-native-reanimated';
 import { styles } from './styles';
 
@@ -315,6 +316,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
       isFocusedState
     ) {
       ReactAnimated.parallel([
+          //@ts-ignore
         timing(leftAnimated, {
           duration: animationDuration ? animationDuration : 300,
           easing: EasingNode.linear,
@@ -322,6 +324,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
             ? customLabelStyles.leftFocused
             : 0,
         }),
+        //@ts-ignore
         timing(fontSizeAnimated, {
           toValue: customLabelStyles.fontSizeFocused
             ? customLabelStyles.fontSizeFocused
@@ -329,6 +332,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
           duration: animationDuration ? animationDuration : 300,
           easing: EasingNode.linear,
         }),
+        //@ts-ignore
         timing(topAnimated, {
           toValue: customLabelStyles.topFocused
             ? customLabelStyles.topFocused
@@ -351,6 +355,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
         }),
       ]).start();
     } else if (staticLabel && isFocusedState) {
+      //@ts-ignore
       Animated.timing(fontColorAnimated, {
         toValue: 1,
         duration: animationDuration ? animationDuration : 300,
@@ -362,6 +367,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
   function animateFocus() {
     if (!staticLabel) {
       ReactAnimated.parallel([
+        //@ts-ignore
         timing(leftAnimated, {
           duration: animationDuration ? animationDuration : 300,
           easing: EasingNode.linear,
@@ -369,6 +375,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
             ? customLabelStyles.leftFocused
             : 0,
         }),
+        //@ts-ignore
         timing(fontSizeAnimated, {
           toValue: customLabelStyles.fontSizeFocused
             ? customLabelStyles.fontSizeFocused
@@ -376,6 +383,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
           duration: animationDuration ? animationDuration : 300,
           easing: EasingNode.linear,
         }),
+        //@ts-ignore
         timing(topAnimated, {
           toValue: customLabelStyles.topFocused
             ? customLabelStyles.topFocused
@@ -398,6 +406,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
         }),
       ]).start();
     } else {
+      //@ts-ignore
       Animated.timing(fontColorAnimated, {
         toValue: 1,
         duration: animationDuration ? animationDuration : 300,
@@ -409,6 +418,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
   function animateBlur() {
     if (!staticLabel) {
       ReactAnimated.parallel([
+        //@ts-ignore
         timing(leftAnimated, {
           duration: animationDuration ? animationDuration : 300,
           easing: EasingNode.linear,
@@ -416,6 +426,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
             ? customLabelStyles.leftBlurred
             : 0,
         }),
+        //@ts-ignore
         timing(fontSizeAnimated, {
           toValue: customLabelStyles.fontSizeBlurred
             ? customLabelStyles.fontSizeBlurred
@@ -423,6 +434,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
           duration: animationDuration ? animationDuration : 300,
           easing: EasingNode.linear,
         }),
+        //@ts-ignore
         timing(topAnimated, {
           toValue: customLabelStyles.topBlurred
             ? customLabelStyles.topBlurred
@@ -438,6 +450,7 @@ const FloatingLabelInput: React.ForwardRefRenderFunction<InputRef, Props> = (
         }),
       ]).start();
     } else {
+      //@ts-ignore
       Animated.timing(fontColorAnimated, {
         toValue: 0,
         duration: animationDuration ? animationDuration : 300,
